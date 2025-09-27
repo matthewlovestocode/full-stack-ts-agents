@@ -8,6 +8,7 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 - Server routes live in Express `Router` modules (e.g., `server/src/routes/*`) that group handlers by resource and are mounted in the main app for RESTful organization.
 - Server request handlers belong in `server/src/handlers/*` so routing layers stay thin and logic is easy to share.
 - `/docs` — Documentation hub with architecture notes, API catalog, release checklists, and templates.
+- `/supabase` — Database workspace for Supabase client code, schema snapshots, and migration artifacts (see `supabase/AGENTS.md`).
 - Client structure highlights:
   - `/src/components/` — reusable React components.
   - `/src/hooks/` — shared custom hooks.
@@ -42,6 +43,7 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 - Root `.env` / `.env.local` — Shared values consumed by scripts or tooling on both stacks. Start from `.env.example` and keep it updated with required keys.
 - `client/.env` — Frontend-only variables; prefix with `VITE_` so Vite exposes them to the bundle. Mirror required entries in `client/.env.example` with instructional defaults.
 - `server/.env` — Backend-only secrets and configuration read by Express via `process.env` (keep out of client scope). Document mandatory values in `server/.env.example`.
+- `supabase/.env` — Supabase tooling credentials scoped to database automation. Mirror required values in `supabase/.env.example` and keep secrets out of client-visible code.
 - Commit the `*.env.example` files so new contributors can bootstrap quickly without exposing secrets.
 
 ## Documentation
@@ -56,5 +58,6 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
     - [Guide Pattern](docs/templates/guide-pattern.md)
     - [Component Pattern](docs/templates/component-pattern.md)
     - [Endpoint Handler Pattern](docs/templates/endpoint-handler.md)
+- Migration proposals live in `/docs/proposals/*.md`; review and approval must happen before any Supabase schema change is implemented.
 
 Stay aligned with the agent operating guides and keep this README updated as new docs or scripts are introduced.
