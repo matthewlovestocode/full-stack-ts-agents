@@ -1,0 +1,17 @@
+{
+  "name": "playwright",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "lint": "tsc --noEmit --project tsconfig.json",
+    "analyze": "tsx scripts/analyze-page.ts"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.47.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.15.7"
+  }
+}

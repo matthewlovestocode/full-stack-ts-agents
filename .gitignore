@@ -6,6 +6,9 @@ client/dist/
 server/dist/
 build/
 coverage/
+playwright/test-results/
+playwright/report/
+playwright/.cache/
 
 # Environment and local config
 .env*
