@@ -24,7 +24,7 @@ This guide explains how to collaborate with Codex while building features in the
 
 ## Testing & Quality Gates
 - Default to running `npm run lint` plus the relevant workspace tests before handing work back to Codex or teammates.
-- Use `npm run test:coverage` when changes may affect the CI coverage gate (80% minimum for both client and server).
+- Use `npm run test:coverage` when changes may affect the CI coverage gate (80% minimum for both client and server), and do not proceed until new or updated tests lift any side that falls under 80%.
 - For Playwright tasks, execute `npm run test --workspace playwright` or `npm run analyze:playwright` as appropriate and attach findings to hand-off notes.
 
 ## Documentation & Handoff

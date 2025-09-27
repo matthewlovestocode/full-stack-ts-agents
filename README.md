@@ -29,7 +29,7 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 - `npm run build` — Run frontend and backend builds.
 - `npm run lint` — Type-check both projects.
 - `npm run test` — Execute workspace-level test commands.
-- `npm run test:coverage` — Compose client and server coverage reports; mirrors the CI gate that fails if either side drops below 80%.
+- `npm run test:coverage` — Compose client and server coverage reports; mirrors the CI gate that fails if either side drops below 80%. When coverage falls under 80%, write or update tests before moving forward.
 - `npm run dev:client` / `npm run dev:server` — Focus on a single stack during development.
 - `npm run gh:workflow -- --branch feature/example --commit "feat: add example" --title "feat: add example" --summary "Sentence one. Sentence two."` — Automate the GitHub workflow (branch switch/create, commit, PR creation with summary and optional Mermaid block, approval (best-effort), merge into `main`, and branch cleanup). Requires `gh` CLI plus `GITHUB_TOKEN` and `GITHUB_REPOSITORY` env vars.
 - `npm run analyze:playwright -- --url https://example.com` — Launch Chromium via Playwright to render a URL and emit an accessibility/layout summary (after `npx playwright install`).

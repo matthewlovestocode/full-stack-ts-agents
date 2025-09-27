@@ -15,7 +15,7 @@
 - Ensure `/README.md` reflects new environment variables or scripts introduced for the backend.
 - Store backend environment variables in `server/.env`; keep secrets out of client-visible locations.
 - Maintain `server/.env.example` with the required keys and safe placeholder values whenever contracts change.
-- Coverage automation fails if backend coverage slips under 80%; run `npm run test:coverage --workspace server` ahead of review when edits might reduce the gate.
+- Coverage automation fails if backend coverage slips under 80%; run `npm run test:coverage --workspace server` ahead of review and create or update tests right away if the threshold is not met.
 
 ## Templates & Patterns
 - Use `/docs/templates/endpoint-handler.md` when scaffolding new controllers; replace placeholders before opening PRs.
