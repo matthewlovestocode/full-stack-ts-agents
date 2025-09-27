@@ -50,6 +50,7 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 
 ## Documentation
 - [Docs Agent Guide](docs/AGENTS.md)
+- [Codex Development Guide](docs/codex-development.md)
 - [Documentation Hub](docs/README.md)
   - [Architecture Overview](docs/architecture.md)
   - [API Surface](docs/api-surface.md)
