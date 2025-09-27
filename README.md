@@ -5,6 +5,8 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 ## Repo Layout
 - `/client` — Vite-powered React frontend; see `client/AGENTS.md` for UI practices.
 - `/server` — Express REST API; see `server/AGENTS.md` for backend conventions.
+- Server routes live in Express `Router` modules (e.g., `server/src/routes/*`) that group handlers by resource and are mounted in the main app for RESTful organization.
+- Server request handlers belong in `server/src/handlers/*` so routing layers stay thin and logic is easy to share.
 - `/docs` — Documentation hub with architecture notes, API catalog, release checklists, and templates.
 - Client structure highlights:
   - `/src/components/` — reusable React components.

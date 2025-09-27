@@ -1,6 +1,6 @@
 import cors from 'cors';
 import express from 'express';
-import type { RequestHandler } from 'express';
+import healthRouter from './routes/health';
 
 export const app = express();
 const port = process.env.PORT ?? 3000;
@@ -8,11 +8,7 @@ const port = process.env.PORT ?? 3000;
 app.use(cors());
 app.use(express.json());
 
-export const healthHandler: RequestHandler = (_req, res) => {
-  res.status(200).json({ status: 'ok' });
-};
-
-app.get('/health', healthHandler);
+app.use('/health', healthRouter);
 
 /* c8 ignore start */
 if (process.env.NODE_ENV !== 'test') {
