@@ -25,7 +25,8 @@
     "test:coverage:client": "npm run test:coverage --workspace client",
     "test:coverage:server": "npm run test:coverage --workspace server",
     "gh:workflow": "node ./scripts/gh-workflow.js",
-    "analyze:playwright": "npm run analyze --workspace playwright --"
+    "analyze:playwright": "npm run analyze --workspace playwright --",
+    "crawl:playwright": "npm run crawl --workspace playwright --"
   },
   "devDependencies": {
     "dotenv": "^16.4.5",
