@@ -44,7 +44,7 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 ## Environment Configuration
 - Root `.env` / `.env.local` — Shared values consumed by scripts or tooling on both stacks. Start from `.env.example` and keep it updated with required keys.
 - `client/.env` — Frontend-only variables; prefix with `VITE_` so Vite exposes them to the bundle. Mirror required entries in `client/.env.example` with instructional defaults.
-- `server/.env` — Backend-only secrets and configuration read by Express via `process.env` (keep out of client scope). Document mandatory values in `server/.env.example`.
+- `server/.env` — Backend-only secrets and configuration read by Express via `process.env` (keep out of client scope). Document mandatory values in `server/.env.example` (e.g., set `IPINFO_TOKEN` for ipinfo geolocation lookups).
 - `supabase/.env` — Supabase tooling credentials scoped to database automation. Mirror required values in `supabase/.env.example` and keep secrets out of client-visible code.
 - Commit the `*.env.example` files so new contributors can bootstrap quickly without exposing secrets.
 
