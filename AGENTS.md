@@ -43,6 +43,7 @@
 
 ## GitHub Workflow Automation
 - Use `npm run gh:workflow` only when the branch is review-ready and automated checks have been run; the script opens, approves (if possible), merges, and cleans up the branch in one pass.
+- Do not push directly to `main`; every change must flow through a feature branch and the workflow automation so observers see a PR trail.
 - Provide a 2-6 sentence summary via `--summary` and optionally attach a Mermaid diagram with `--mermaid` to enrich the PR body.
 - Ensure `.env` (or the shell) supplies `GITHUB_TOKEN` and `GITHUB_REPOSITORY` so the GitHub CLI can authenticate without prompts.
 - The helper performs a squash merge into `main`; avoid running it for work that still needs peer review or multiple commits preserved.
