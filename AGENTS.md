@@ -37,6 +37,12 @@
 - When modifying `/client` or `/server`, update `/README.md` and any impacted `/docs` pages so they stay accurate and complete.
 - Confirm new docs keep the README table of contents in sync with the `/docs` directory.
 
+## GitHub Workflow Automation
+- Use `npm run gh:workflow` only when the branch is review-ready and automated checks have been run; the script opens, approves (if possible), merges, and cleans up the branch in one pass.
+- Provide a 2-6 sentence summary via `--summary` and optionally attach a Mermaid diagram with `--mermaid` to enrich the PR body.
+- Ensure `.env` (or the shell) supplies `GITHUB_TOKEN` and `GITHUB_REPOSITORY` so the GitHub CLI can authenticate without prompts.
+- The helper performs a squash merge into `main`; avoid running it for work that still needs peer review or multiple commits preserved.
+
 ## Sandbox & Approvals
 - Stay within workspace-write boundaries; request elevation with a clear justification when needed.
 - Avoid destructive commands unless the user explicitly requests them.
