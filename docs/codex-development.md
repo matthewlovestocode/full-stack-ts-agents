@@ -19,7 +19,7 @@ This guide explains how to collaborate with Codex while building features in the
 - Use the root npm scripts as the canonical entry points (`npm run dev`, `npm run lint`, `npm run test`, `npm run test:coverage`). Specify workspaces if only one stack is affected.
 - Keep environment variables scoped: shared values in `.env`, frontend values with the `VITE_` prefix in `client/.env`, backend secrets in `server/.env`, and Supabase tooling keys in `supabase/.env`.
 - Update the matching `*.env.example` files whenever new variables become mandatory so Codex and teammates can sync quickly.
-- When automation is ready, run `npm run gh:workflow` with the required flags; skip it for exploratory or in-progress changes.
+- When automation is ready, run `npm run gh:workflow` with the required flags; skip it for exploratory or in-progress changes, and never bypass it with a direct push to `main`.
 
 ## Testing & Quality Gates
 - Default to running `npm run lint` plus the relevant workspace tests before handing work back to Codex or teammates.
