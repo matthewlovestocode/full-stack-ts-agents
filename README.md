@@ -8,11 +8,18 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 - `/docs` — Documentation hub with architecture notes, API catalog, release checklists, and templates.
 
 ## Getting Started
-1. Install dependencies: `npm install` (run in root if using workspaces, otherwise per package).
+1. Install dependencies: `npm install` (the root `package.json` wires up workspaces for client and server).
 2. Launch dev servers:
-   - Frontend: `npm run dev --prefix client`
-   - Backend: `npm run dev --prefix server`
+   - Run both: `npm run dev`
+   - Frontend only: `npm run dev:client`
+   - Backend only: `npm run dev:server`
 3. Keep docs in sync with code changes; update release checklist before deployments.
+
+## Scripts
+- `npm run build` — Run frontend and backend builds.
+- `npm run lint` — Type-check both projects.
+- `npm run test` — Execute workspace-level test commands.
+- `npm run dev:client` / `npm run dev:server` — Focus on a single stack during development.
 
 ## Documentation
 - [Docs Agent Guide](docs/AGENTS.md)

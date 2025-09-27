@@ -1,0 +1,25 @@
+{
+  "name": "full-stack-ts-agents",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "run-p dev:client dev:server",
+    "dev:client": "npm run dev --workspace client",
+    "dev:server": "npm run dev --workspace server",
+    "build": "npm run build --workspace client && npm run build --workspace server",
+    "lint": "run-s lint:client lint:server",
+    "lint:client": "npm run lint --workspace client",
+    "lint:server": "npm run lint --workspace server",
+    "test": "run-s test:client test:server",
+    "test:client": "npm run test --workspace client",
+    "test:server": "npm run test --workspace server"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.4.5"
+  }
+}

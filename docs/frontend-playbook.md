@@ -13,7 +13,7 @@
 ## Workflow Checklist
 1. Plan changes and note dependencies in standups.
 2. Start from the `component-pattern` template for new UI units.
-3. Run `npm run lint` and `npm run test -- --watch=false` before opening a PR.
+3. Run `npm run lint --workspace client` and `npm run test --workspace client -- --watch=false` before opening a PR.
 4. Update docs or screenshots when UX flows change.
 
 ## Accessibility & Styling
