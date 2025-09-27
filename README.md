@@ -19,6 +19,7 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 - `npm run build` — Run frontend and backend builds.
 - `npm run lint` — Type-check both projects.
 - `npm run test` — Execute workspace-level test commands.
+- `npm run test:coverage` — Compose client and server coverage reports; mirrors the CI gate that fails if either side drops below 80%.
 - `npm run dev:client` / `npm run dev:server` — Focus on a single stack during development.
 
 ## Environment Configuration

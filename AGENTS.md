@@ -47,3 +47,5 @@
 ## Delivery Checklist
 - Explain modifications, note testing status (or why tests were skipped), and suggest natural next steps for the user.
 - Call out documentation updates or confirm that docs remain accurate after code changes.
+- Keep the coverage automation green: the workspace CI composes client and server vitest runs and fails when either coverage report drops below 80%; run the root `npm run test:coverage` gate locally before hand-off if coverage may shift.
+- Use the root scripts (`npm run test`, `npm run test:coverage`) to validate changes before hand-off when applicable.
