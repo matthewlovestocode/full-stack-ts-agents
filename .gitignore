@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+client/dist/
+server/dist/
+build/
+coverage/
+
+# Environment and local config
+.env*
+*.local
+*.log
+
+# IDE/editor files
+.idea/
+.vscode/
+*.swp
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Misc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+agent-examples
