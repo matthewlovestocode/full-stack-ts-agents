@@ -1,5 +1,6 @@
 import React from 'react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
+import { BrowserRouter } from 'react-router-dom';
 import App from './views/App';
 
 const { createRootMock, renderMock } = vi.hoisted(() => {
@@ -35,6 +36,9 @@ describe('client entrypoint', () => {
 
     const renderedTree = renderMock.mock.calls[0][0] as React.ReactElement;
     expect(renderedTree.type).toBe(React.StrictMode);
-    expect(renderedTree.props.children.type).toBe(App);
+
+    const routerTree = renderedTree.props.children as React.ReactElement;
+    expect(routerTree.type).toBe(BrowserRouter);
+    expect(routerTree.props.children.type).toBe(App);
   });
 });

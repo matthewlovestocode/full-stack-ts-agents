@@ -6,7 +6,8 @@
   "scripts": {
     "test": "playwright test",
     "lint": "tsc --noEmit --project tsconfig.json",
-    "analyze": "tsx scripts/analyze-page.ts"
+    "analyze": "tsx scripts/analyze-page.ts",
+    "crawl": "tsx scripts/crawl-site.ts"
   },
   "dependencies": {
     "@playwright/test": "^1.47.1"
