@@ -11,6 +11,7 @@
 - Mirror root planning rhythm; call out documentation impacts when code changes land.
 - Run prose lint or spellcheck scripts if available before merging doc updates.
 - Confirm doc examples match TypeScript/Express/Vite conventions used in `/client` and `/server`.
+- Add Supabase schema proposals under `/docs/proposals` and note their approval status prominently.
 
 ## Templates & Patterns
 - Start new guides from `/docs/templates/guide-pattern.md`; replace placeholders prior to review.

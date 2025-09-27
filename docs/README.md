@@ -11,3 +11,5 @@ This directory houses shared knowledge for the template project. Start here to f
 - [Templates Overview](templates/guide-pattern.md)
   - [Component Pattern](templates/component-pattern.md)
   - [Endpoint Handler Pattern](templates/endpoint-handler.md)
+- Proposals
+  - [Schema Change Proposals](proposals/.README_placeholder.md)

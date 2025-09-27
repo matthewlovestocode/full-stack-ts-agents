@@ -4,16 +4,18 @@
   "private": true,
   "workspaces": [
     "client",
-    "server"
+    "server",
+    "supabase"
   ],
   "scripts": {
     "dev": "run-p dev:client dev:server",
     "dev:client": "npm run dev --workspace client",
     "dev:server": "npm run dev --workspace server",
     "build": "npm run build --workspace client && npm run build --workspace server",
-    "lint": "run-s lint:client lint:server",
+    "lint": "run-s lint:client lint:server lint:supabase",
     "lint:client": "npm run lint --workspace client",
     "lint:server": "npm run lint --workspace server",
+    "lint:supabase": "npm run lint --workspace supabase",
     "test": "run-s test:client test:server",
     "test:client": "npm run test --workspace client",
     "test:server": "npm run test --workspace server",

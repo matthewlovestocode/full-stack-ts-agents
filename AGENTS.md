@@ -5,6 +5,7 @@
 - `/client`: Frontend workbench; defer to `/client/AGENTS.md` for React and state-management specifics.
 - `/server`: Backend playbook; see `/server/AGENTS.md` for Express and API lifecycle specifics.
 - `/docs`: Documentation hub; check `/docs/AGENTS.md` for structuring and navigation rules.
+- `/supabase`: Database workspace; see `/supabase/AGENTS.md` for migration and schema governance.
 - `/README.md`: Maintain a table of contents that links into `/docs` so docs stay discoverable.
 - Identify which area the task touches before editing so changes stay scoped and accurate.
 
@@ -13,6 +14,7 @@
 - Frontend-only variables live in `client/.env` and must use the `VITE_` prefix so Vite exposes them safely.
 - Backend-only secrets and configuration belong in `server/.env`; never leak these into client bundles or docs.
 - Keep `.env.example`, `client/.env.example`, and `server/.env.example` checked in with instructional defaults whenever required keys change.
+- Mirror Supabase secrets and configuration in `/supabase/.env.example`; never leak database credentials outside the server context.
 
 ## Mission Snapshot
 - Capture repo constraints, sandbox limits, and any live workspace context before acting.
@@ -36,6 +38,7 @@
 ## Documentation Stewardship
 - When modifying `/client` or `/server`, update `/README.md` and any impacted `/docs` pages so they stay accurate and complete.
 - Confirm new docs keep the README table of contents in sync with the `/docs` directory.
+- Draft database changes as `/docs/proposals/*.md`; only implement Supabase migrations after explicit approval.
 
 ## GitHub Workflow Automation
 - Use `npm run gh:workflow` only when the branch is review-ready and automated checks have been run; the script opens, approves (if possible), merges, and cleans up the branch in one pass.
