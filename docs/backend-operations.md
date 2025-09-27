@@ -14,7 +14,6 @@
 - Centralize logs with the configured logging provider; scrub sensitive data.
 - Define alerts for latency, error rate, and queue backlogs.
 - Document new dashboards or metrics here with direct links when available.
-- Geolocation enrichment uses ipinfo; set `IPINFO_TOKEN` in `server/.env` and monitor usage against the free-tier quota.
 
 ## Runbooks
 - Capture rollback steps; default to automated rollback if deployment fails.
