@@ -27,6 +27,7 @@
 
 ## Planning Discipline
 - Draft multi-step plans for non-trivial work and update them after each completed step.
+- Surface potential refactors early, record the decision in `docs/templates/refactor-plan.md`, and follow `docs/refactor-playbook.md` before executing sweeping changes.
 
 ## Tool & Search Defaults
 - Prefer `rg`/`rg --files` for code and file discovery; fall back only when unavailable.
