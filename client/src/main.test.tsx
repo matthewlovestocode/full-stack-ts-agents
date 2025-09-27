@@ -1,6 +1,6 @@
 import React from 'react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import App from './App';
+import App from './views/App';
 
 const { createRootMock, renderMock } = vi.hoisted(() => {
   const render = vi.fn();
