@@ -15,7 +15,7 @@
 
 ## Workflow Expectations
 - Mirror root planning and documentation rules; call out `/docs/frontend` updates in the summary.
-- Run `npm run test --workspace client` for component suites when touching shared UI.
+- Run `npm run lint --workspace client` and `npm run test --workspace client` before sending changes for review.
 - Update `/README.md` if new frontend scripts or npm commands are introduced.
 - Keep client environment variables in `client/.env` using the `VITE_` prefix so Vite exposes them safely.
 - When adding or renaming frontend env vars, update `client/.env.example` with placeholder values so onboarding stays smooth.

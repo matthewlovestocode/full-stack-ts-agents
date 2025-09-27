@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import type { Request, Response } from 'express';
+import type { Request, Response, NextFunction } from 'express';
 import { healthHandler } from './handlers/health';
 
 type MockResponse = Pick<Response, 'status' | 'json'> & {
@@ -12,12 +12,12 @@ const createMockResponse = (): MockResponse => {
     status: vi.fn(function status(this: MockResponse, code: number) {
       this.statusCode = code;
       return this;
-    }) as MockResponse['status'],
+    }) as unknown as MockResponse['status'],
     json: vi.fn(function json(this: MockResponse, payload: unknown) {
       this.payload = payload;
       this.statusCode = this.statusCode ?? 200;
       return this;
-    }) as MockResponse['json'],
+    }) as unknown as MockResponse['json'],
   };
 
   return res;
@@ -27,7 +27,9 @@ describe('healthHandler', () => {
   it('returns an ok payload with a 200 status', () => {
     const res = createMockResponse();
 
-    healthHandler({} as Request, res as Response);
+    const next = vi.fn() as unknown as NextFunction;
+
+    healthHandler({} as Request, res as Response, next);
 
     expect(res.status).toHaveBeenCalledWith(200);
     expect(res.json).toHaveBeenCalledWith({ status: 'ok' });

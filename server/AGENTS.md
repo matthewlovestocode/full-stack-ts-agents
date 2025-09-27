@@ -11,7 +11,7 @@
 
 ## Workflow Expectations
 - Follow the root planning cadence; surface API contract changes in standups and summaries.
-- Run `npm run test:server` (or the closest backend suite) before handing off changes.
+- Run `npm run lint --workspace server` and `npm run test:server` before handing off changes.
 - Ensure `/README.md` reflects new environment variables or scripts introduced for the backend.
 - Store backend environment variables in `server/.env`; keep secrets out of client-visible locations.
 - Maintain `server/.env.example` with the required keys and safe placeholder values whenever contracts change.
