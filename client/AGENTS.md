@@ -6,6 +6,12 @@
 - Vite-powered React + TypeScript; prefer functional components and hooks.
 - Reach for Zustand when state grows beyond local component scope or multiple routes share data.
 - Keep shared UI primitives in `/client/src/components/common` so they stay discoverable.
+- Project structure expectations:
+  - `/src/components/` — shared and domain components.
+  - `/src/hooks/` — reusable custom hooks.
+  - `/src/api/` — data-fetching clients encapsulating server calls.
+  - `/src/stores/` — Zustand stores plus related selectors/actions.
+  - `/src/views/` — top-level route views that compose components and state.
 
 ## Workflow Expectations
 - Mirror root planning and documentation rules; call out `/docs/frontend` updates in the summary.

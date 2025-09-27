@@ -6,6 +6,12 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 - `/client` — Vite-powered React frontend; see `client/AGENTS.md` for UI practices.
 - `/server` — Express REST API; see `server/AGENTS.md` for backend conventions.
 - `/docs` — Documentation hub with architecture notes, API catalog, release checklists, and templates.
+- Client structure highlights:
+  - `/src/components/` — reusable React components.
+  - `/src/hooks/` — shared custom hooks.
+  - `/src/api/` — modules that fetch data from the backend.
+  - `/src/stores/` — Zustand stores for shared state.
+  - `/src/views/` — top-level routed view components.
 
 ## Getting Started
 1. Install dependencies: `npm install` (the root `package.json` wires up workspaces for client and server).
