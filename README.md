@@ -34,6 +34,7 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 - `npm run gh:workflow -- --branch feature/example --commit "feat: add example" --title "feat: add example" --summary "Sentence one. Sentence two."` — Automate the GitHub workflow (branch switch/create, commit, PR creation with summary and optional Mermaid block, approval (best-effort), merge into `main`, and branch cleanup). Requires `gh` CLI plus `GITHUB_TOKEN` and `GITHUB_REPOSITORY` env vars.
 - `npm run analyze:playwright -- --url https://example.com` — Launch Chromium via Playwright to render a URL and emit an accessibility/layout summary (after `npx playwright install`).
 - `npm run crawl:playwright -- --base http://127.0.0.1:5173 --routes /,/docs` — Generate responsive screenshots for each route and rebuild `docs/crawl.md`.
+- `npm run refactor:verify` — Run linting plus the combined coverage gate to validate refactor branches before opening a PR.
 
 ### Automated PR Workflow
 - Run `npm run gh:workflow` only after local tests, linting, and docs are complete; the helper squash-merges directly into `main` and deletes the feature branch.
@@ -59,11 +60,13 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
   - [Frontend Playbook](docs/frontend-playbook.md)
   - [Backend Operations](docs/backend-operations.md)
   - [Release Checklist](docs/release-checklist.md)
+  - [Refactor Playbook](docs/refactor-playbook.md)
   - [Crawl Report](docs/crawl.md)
   - Templates
     - [Guide Pattern](docs/templates/guide-pattern.md)
     - [Component Pattern](docs/templates/component-pattern.md)
     - [Endpoint Handler Pattern](docs/templates/endpoint-handler.md)
+    - [Refactor Plan Template](docs/templates/refactor-plan.md)
 - Migration proposals live in `/docs/proposals/*.md`; review and approval must happen before any Supabase schema change is implemented.
 
 Stay aligned with the agent operating guides and keep this README updated as new docs or scripts are introduced.

@@ -12,6 +12,7 @@ This guide explains how to collaborate with Codex while building features in the
 ## Collaboration Workflow
 - Frame each request with the desired outcome, affected stack(s), and any constraints (deadlines, testing scope).
 - Allow Codex to draft a plan for non-trivial work and review it before execution; request adjustments if steps are missing.
+- When work reveals structural debt, pause to log a refactor plan (`docs/templates/refactor-plan.md`) and align on the approach in the Refactor Playbook before coding.
 - Share command results that agents cannot obtain (e.g., UI output) and re-run any commands blocked by local restrictions.
 - When Codex proposes changes, inspect the diff locally before committing and provide feedback iteratively.
 

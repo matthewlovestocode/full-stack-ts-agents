@@ -9,9 +9,11 @@ This directory houses shared knowledge for the template project. Start here to f
 - [Frontend Playbook](frontend-playbook.md)
 - [Backend Operations](backend-operations.md)
 - [Release Checklist](release-checklist.md)
+- [Refactor Playbook](refactor-playbook.md)
 - [Crawl Report](crawl.md)
 - [Templates Overview](templates/guide-pattern.md)
   - [Component Pattern](templates/component-pattern.md)
   - [Endpoint Handler Pattern](templates/endpoint-handler.md)
+  - [Refactor Plan Template](templates/refactor-plan.md)
 - Proposals
   - [Schema Change Proposals](proposals/.README_placeholder.md)
