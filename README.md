@@ -21,6 +21,7 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 - `npm run test` — Execute workspace-level test commands.
 - `npm run test:coverage` — Compose client and server coverage reports; mirrors the CI gate that fails if either side drops below 80%.
 - `npm run dev:client` / `npm run dev:server` — Focus on a single stack during development.
+- `npm run gh:workflow -- --branch feature/example --commit "feat: add example" --title "feat: add example" --summary "Sentence one. Sentence two."` — Automate the GitHub workflow (branch switch/create, commit, PR creation with summary and optional Mermaid block, approval, merge into `main`, and branch cleanup). Requires `gh` CLI plus `GITHUB_TOKEN` and `GITHUB_REPOSITORY` env vars.
 
 ## Environment Configuration
 - Root `.env` / `.env.local` — Shared values consumed by scripts or tooling on both stacks. Start from `.env.example` and keep it updated with required keys.
