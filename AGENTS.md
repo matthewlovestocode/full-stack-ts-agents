@@ -8,6 +8,12 @@
 - `/README.md`: Maintain a table of contents that links into `/docs` so docs stay discoverable.
 - Identify which area the task touches before editing so changes stay scoped and accurate.
 
+## Environment Guardrails
+- Root `.env` files store shared values needed by tooling or both stacks; do not place stack-specific secrets here.
+- Frontend-only variables live in `client/.env` and must use the `VITE_` prefix so Vite exposes them safely.
+- Backend-only secrets and configuration belong in `server/.env`; never leak these into client bundles or docs.
+- Keep `.env.example`, `client/.env.example`, and `server/.env.example` checked in with instructional defaults whenever required keys change.
+
 ## Mission Snapshot
 - Capture repo constraints, sandbox limits, and any live workspace context before acting.
 
