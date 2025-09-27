@@ -6,6 +6,8 @@
 - TypeScript Express REST API; keep handlers thin and delegate business logic to `/server/src/services`.
 - Enforce RESTful naming and HTTP semantics; document new routes in `/docs/api-surface.md`.
 - Centralise configuration under `/server/src/config`; never hardcode secrets.
+- Define routes inside Express `Router` modules grouped by resource (e.g., `/server/src/routes/users.ts`) and mount them in the main app entrypoint to keep RESTful boundaries clear.
+- Store request handlers in `/server/src/handlers` so routers remain declarative and reusable logic stays isolated from wiring.
 
 ## Workflow Expectations
 - Follow the root planning cadence; surface API contract changes in standups and summaries.

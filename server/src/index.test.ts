@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import type { Request, Response } from 'express';
-import { healthHandler } from './index';
+import { healthHandler } from './handlers/health';
 
 type MockResponse = Pick<Response, 'status' | 'json'> & {
   statusCode?: number;
