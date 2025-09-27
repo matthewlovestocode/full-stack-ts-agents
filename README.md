@@ -23,6 +23,12 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 - `npm run dev:client` / `npm run dev:server` — Focus on a single stack during development.
 - `npm run gh:workflow -- --branch feature/example --commit "feat: add example" --title "feat: add example" --summary "Sentence one. Sentence two."` — Automate the GitHub workflow (branch switch/create, commit, PR creation with summary and optional Mermaid block, approval (best-effort), merge into `main`, and branch cleanup). Requires `gh` CLI plus `GITHUB_TOKEN` and `GITHUB_REPOSITORY` env vars.
 
+### Automated PR Workflow
+- Run `npm run gh:workflow` only after local tests, linting, and docs are complete; the helper squash-merges directly into `main` and deletes the feature branch.
+- Required flags: `--branch`, `--commit`, `--title`, and `--summary` (must include 2-6 sentences). Optional `--mermaid "graph TD; ..."` appends a diagram to the PR body. Use `--base` to merge into a different branch when needed.
+- Environment: provide `GITHUB_TOKEN` (with `repo` scope) and `GITHUB_REPOSITORY=owner/name` via `.env` or the shell so the GitHub CLI can authenticate without prompts.
+- The script attempts to approve the PR; GitHub ignores the approval if you are the author, but the merge still succeeds.
+
 ## Environment Configuration
 - Root `.env` / `.env.local` — Shared values consumed by scripts or tooling on both stacks. Start from `.env.example` and keep it updated with required keys.
 - `client/.env` — Frontend-only variables; prefix with `VITE_` so Vite exposes them to the bundle. Mirror required entries in `client/.env.example` with instructional defaults.
