@@ -33,6 +33,7 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 
 ### Automated PR Workflow
 - Run `npm run gh:workflow` only after local tests, linting, and docs are complete; the helper squash-merges directly into `main` and deletes the feature branch.
+- Make sure `npm run lint` succeeds (calls both client and server lint scripts) before committing or opening a PR.
 - Required flags: `--branch`, `--commit`, `--title`, and `--summary` (must include 2-6 sentences). Optional `--mermaid "graph TD; ..."` appends a diagram to the PR body. Use `--base` to merge into a different branch when needed.
 - Environment: provide `GITHUB_TOKEN` (with `repo` scope) and `GITHUB_REPOSITORY=owner/name` via `.env` or the shell so the GitHub CLI can authenticate without prompts.
 - The script attempts to approve the PR; GitHub ignores the approval if you are the author, but the merge still succeeds.
