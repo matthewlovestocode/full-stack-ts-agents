@@ -19,7 +19,7 @@
 - Update `/README.md` if new frontend scripts or npm commands are introduced.
 - Keep client environment variables in `client/.env` using the `VITE_` prefix so Vite exposes them safely.
 - When adding or renaming frontend env vars, update `client/.env.example` with placeholder values so onboarding stays smooth.
-- CI enforces an 80% minimum for client coverage; run `npm run test:coverage --workspace client` before hand-off when changes could impact the gate.
+- CI enforces an 80% minimum for client coverage; run `npm run test:coverage --workspace client` before hand-off and expand or update tests immediately if coverage dips below 80%.
 
 ## Templates & Patterns
 - Start new components from `/docs/templates/component-pattern.md`; remove placeholder tokens before review.
