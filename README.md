@@ -9,6 +9,7 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 - Server request handlers belong in `server/src/handlers/*` so routing layers stay thin and logic is easy to share.
 - `/docs` — Documentation hub with architecture notes, API catalog, release checklists, and templates.
 - `/supabase` — Database workspace for Supabase client code, schema snapshots, and migration artifacts (see `supabase/AGENTS.md`).
+- `/playwright` — Browser automation workspace for rendering pages, running Chromium-based smoke checks, and scripted page analysis (see `playwright/AGENTS.md`).
 - Client structure highlights:
   - `/src/components/` — reusable React components.
   - `/src/hooks/` — shared custom hooks.
@@ -31,6 +32,7 @@ Starter workspace for a TypeScript React + Express project. Follow the agent gui
 - `npm run test:coverage` — Compose client and server coverage reports; mirrors the CI gate that fails if either side drops below 80%.
 - `npm run dev:client` / `npm run dev:server` — Focus on a single stack during development.
 - `npm run gh:workflow -- --branch feature/example --commit "feat: add example" --title "feat: add example" --summary "Sentence one. Sentence two."` — Automate the GitHub workflow (branch switch/create, commit, PR creation with summary and optional Mermaid block, approval (best-effort), merge into `main`, and branch cleanup). Requires `gh` CLI plus `GITHUB_TOKEN` and `GITHUB_REPOSITORY` env vars.
+- `npm run analyze:playwright -- --url https://example.com` — Launch Chromium via Playwright to render a URL and emit an accessibility/layout summary (after `npx playwright install`).
 
 ### Automated PR Workflow
 - Run `npm run gh:workflow` only after local tests, linting, and docs are complete; the helper squash-merges directly into `main` and deletes the feature branch.

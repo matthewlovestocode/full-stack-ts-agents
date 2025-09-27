@@ -6,6 +6,7 @@
 - `/server`: Backend playbook; see `/server/AGENTS.md` for Express and API lifecycle specifics.
 - `/docs`: Documentation hub; check `/docs/AGENTS.md` for structuring and navigation rules.
 - `/supabase`: Database workspace; see `/supabase/AGENTS.md` for migration and schema governance.
+- `/playwright`: Browser automation workspace; see `/playwright/AGENTS.md` for end-to-end testing and page analysis routines.
 - `/README.md`: Maintain a table of contents that links into `/docs` so docs stay discoverable.
 - Identify which area the task touches before editing so changes stay scoped and accurate.
 
