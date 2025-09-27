@@ -2,6 +2,18 @@
 
 Starter workspace for a TypeScript React + Express project. Follow the agent guides in `/AGENTS.md` and scoped sub-guides for area-specific workflows.
 
+## Why Use as a Developer
+- **Ship PRs in minutes** — Trigger the `PR and merge` prompt from the Codex VS Code extension to stage changes, draft a rich summary, and even attach an optional Mermaid diagram before the workflow script opens and merges the pull request.
+- **See the UI at a glance** — Run the `Crawl app` command to capture phone, tablet, and desktop screenshots of each route and regenerate a stakeholder-ready markdown report in `/docs/crawl.md`.
+- **Stay green automatically** — Let Codex compose client and server tests (including coverage) so statements, branches, functions, and lines all clear the 80% bar; if coverage dips, the assistant guides you to add the missing tests before continuing.
+- **Work from shared context** — Every task starts with synchronized AGENTS guides, workspace scripts, and documentation links so you and Codex reason about the same project map.
+- **Harness focused agents** — Client and server guides encode stack-specific conventions so Codex can suggest idiomatic React patterns, Express routing layouts, and shared validation strategies without reinventing the codebase each sprint.
+- **Refactor with confidence** — Reach for the Refactor Playbook and plan template to split risky rewrites into reviewable slices, then run `npm run refactor:verify` to gate delivery on passing lint and coverage.
+- **Explore quickly** — Use the Playwright `analyze` and `crawl` commands to inspect layouts, accessibility, and responsive screenshots without leaving VS Code.
+- **Document as you go** — The Docs hub keeps architecture, API surfaces, and release checklists in sync, while Codex updates indexes so newcomers discover fresh guides automatically.
+- **Govern database evolution** — Supabase agents scaffold schema design proposals, capture approvals in `/docs/proposals`, and keep migrations paused until reviewers sign off, preventing drift between the API and the data layer.
+- **Avoid AI slop** — The coordinated prompts, workspace scripts, and coverage gates keep Codex accountable to the repo’s standards, delivering reliable refactors and docs instead of the one-shot guesses common with generic AI helpers.
+
 ## Repo Layout
 - `/client` — Vite-powered React frontend; see `client/AGENTS.md` for UI practices.
 - `/server` — Express REST API; see `server/AGENTS.md` for backend conventions.
